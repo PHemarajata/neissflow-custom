@@ -33,7 +33,7 @@ process MLST {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        mlst: \$( echo \$(mlst --version 2>&1) | sed 's/mlst //' )
+        mlst: \$( mlst --version 2>/dev/null | sed 's/mlst //' || echo "unknown" )
     END_VERSIONS
 
     """

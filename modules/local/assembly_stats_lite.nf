@@ -97,7 +97,7 @@ EOF
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        python: \$(python3 --version 2>&1 | sed 's/Python //')
+        python: \$(python3 --version 2>/dev/null | sed 's/Python //' || echo "unknown")
     END_VERSIONS
     """
 }

@@ -30,7 +30,7 @@ process FASTP {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        fastp: \$(fastp --version 2>&1 | sed -e "s/fastp //g")
+        fastp: \$(fastp --version 2>/dev/null | sed -e "s/fastp //g" || echo "unknown")
     END_VERSIONS
     """
 }

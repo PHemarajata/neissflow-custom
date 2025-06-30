@@ -50,7 +50,7 @@ process SNIPPY {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            snippy: \$(echo \$(snippy --version 2>&1) | sed 's/snippy //')
+            snippy: \$(snippy --version 2>/dev/null | sed 's/snippy //' || echo "unknown")
         END_VERSIONS
 
         """
@@ -64,7 +64,7 @@ process SNIPPY {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            snippy: \$(echo \$(snippy --version 2>&1) | sed 's/snippy //')
+            snippy: \$(snippy --version 2>/dev/null | sed 's/snippy //' || echo "unknown")
         END_VERSIONS
 
         """

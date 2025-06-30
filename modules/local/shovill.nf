@@ -45,7 +45,7 @@ process SHOVILL {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            shovill: \$(echo \$(shovill --version 2>&1) | sed 's/^.*shovill //')
+            shovill: \$(shovill --version 2>/dev/null | sed 's/^.*shovill //' || echo "unknown")
         END_VERSIONS
         """
     } else {
@@ -68,7 +68,7 @@ process SHOVILL {
 
         cat <<-END_VERSIONS > versions.yml
         "${task.process}":
-            shovill: \$(echo \$(shovill --version 2>&1) | sed 's/^.*shovill //')
+            shovill: \$(shovill --version 2>/dev/null | sed 's/^.*shovill //' || echo "unknown")
         END_VERSIONS
         """
     }
