@@ -7,6 +7,7 @@ include { DEPTH            } from '../../modules/local/depth'
 include { VARIANT_ANALYSIS } from '../../modules/local/variant_analysis'
 include { MLST             } from '../../modules/local/mlst'
 include { NGMASTER         } from '../../modules/local/ngmaster'
+include { NGMASTER_SIMPLE  } from '../../modules/local/ngmaster_simple'
 include { BLASTN           } from '../../modules/local/blastn'
 include { MERGE_SINGLE_AMR } from '../../modules/local/merge_single_amr'
 include { MERGE_AMR        } from '../../modules/local/merge_amr'
@@ -23,6 +24,10 @@ workflow AMR_PROFILER {
     main:
 
     ch_versions = Channel.empty()
+    
+    // Create channels for NGMASTER database files
+    ch_ngstar_db = Channel.fromPath("${params.ngstar}").parent()
+    ch_ngmast_db = Channel.fromPath("${params.ngmast}").parent()
 
     //
     // Variant calling for HGT genes with Snippy
@@ -63,10 +68,19 @@ workflow AMR_PROFILER {
     //
     // Get NGSTAR and NGMAST type
     //
-    NGMASTER (
-        contigs
-    )
-    ch_versions = ch_versions.mix(NGMASTER.out.versions)
+    if (params.use_simple_ngmaster) {
+        NGMASTER_SIMPLE (
+            contigs
+        )
+        ch_ngmaster_report = NGMASTER_SIMPLE.out.ngmaster_report
+        ch_versions = ch_versions.mix(NGMASTER_SIMPLE.out.versions)
+    } else {
+        NGMASTER (
+            contigs
+        )
+        ch_ngmaster_report = NGMASTER.out.ngmaster_report
+        ch_versions = ch_versions.mix(NGMASTER.out.versions)
+    }
 
     //
     // Run Blastn to get alleles and gene lengths
@@ -79,7 +93,7 @@ workflow AMR_PROFILER {
     //
     // Merge reports into one AMR report for sample
     //
-    ch_merge_input = VARIANT_ANALYSIS.out.report.join(BLASTN.out.blast_report).join(MLST.out.mlst_report).join(NGMASTER.out.ngmaster_report)
+    ch_merge_input = VARIANT_ANALYSIS.out.report.join(BLASTN.out.blast_report).join(MLST.out.mlst_report).join(ch_ngmaster_report)
     ch_amr_report = Channel.empty()
     MERGE_SINGLE_AMR (
             ch_merge_input
@@ -129,7 +143,7 @@ workflow AMR_PROFILER {
 
     mlst_report        = MLST.out.mlst_report               // channel: [ val(sample_name), [ mlst_report ] ]
 
-    ngmaster_report    = NGMASTER.out.ngmaster_report       // channel: [ val(sample_name), [ ngmaster_report ] ]
+    ngmaster_report    = ch_ngmaster_report                 // channel: [ val(sample_name), [ ngmaster_report ] ]
 
     blast_report       = BLASTN.out.blast_report            // channel: [ val(sample_name), [ blast_report ] ]
 
