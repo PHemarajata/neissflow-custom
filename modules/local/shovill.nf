@@ -26,6 +26,10 @@ process SHOVILL {
 
     if (params.downsample) {
         """
+        # Set TMPDIR if not already set
+        export TMPDIR=\${TMPDIR:-\$PWD/tmp}
+        mkdir -p \$TMPDIR
+        
         shovill \\
             --R1 ${reads[0]} \\
             --R2 ${reads[1]} \\
@@ -46,6 +50,10 @@ process SHOVILL {
         """
     } else {
         """
+        # Set TMPDIR if not already set
+        export TMPDIR=\${TMPDIR:-\$PWD/tmp}
+        mkdir -p \$TMPDIR
+        
         shovill \\
             --R1 ${reads[0]} \\
             --R2 ${reads[1]} \\

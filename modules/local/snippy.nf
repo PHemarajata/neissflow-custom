@@ -39,6 +39,9 @@ process SNIPPY {
         read_1 = input[0]
         read_2 = input[1]
         """
+        # Set TMPDIR if not already set
+        export TMPDIR=\${TMPDIR:-\$PWD/tmp}
+        mkdir -p \$TMPDIR
 
         filename=$ref
         outdir="\${filename%.*}"

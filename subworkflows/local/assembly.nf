@@ -6,6 +6,7 @@
 include { SHOVILL                } from '../../modules/local/shovill'
 include { ASSEMBLY_STATS         } from '../../modules/local/spades/assembly_stats'
 include { QUAST                  } from '../../modules/nf-core/quast/main'
+include { ASSEMBLY_STATS_LITE   } from '../../modules/local/assembly_stats_lite'
 
 workflow ASSEMBLY {
     take:
@@ -67,12 +68,22 @@ workflow ASSEMBLY {
         ch_versions = ch_versions.mix(ASSEMBLY_STATS.out.versions)
     }
 
-    QUAST(
-        ch_quast_in,
-        [[],params.FA19cg],
-        [[],[]]
-    )
-    ch_versions = ch_versions.mix(QUAST.out.versions)
+    // Choose between QUAST (full featured) or ASSEMBLY_STATS_LITE (fast)
+    if (params.use_lite_assembly_stats) {
+        ASSEMBLY_STATS_LITE(
+            ch_quast_in
+        )
+        ch_quast_results = ASSEMBLY_STATS_LITE.out.stats.map { meta, stats -> [meta, [stats]] }
+        ch_versions = ch_versions.mix(ASSEMBLY_STATS_LITE.out.versions)
+    } else {
+        QUAST(
+            ch_quast_in,
+            [[],params.FA19cg],
+            [[],[]]
+        )
+        ch_quast_results = QUAST.out.results
+        ch_versions = ch_versions.mix(QUAST.out.versions)
+    }
 
     emit:
 
@@ -80,7 +91,7 @@ workflow ASSEMBLY {
 
     qc_stats_report     = ch_qc_stats_report                         // channel: qc_stats_report
 
-    quast_results       = QUAST.out.results                          // channel: [ val(sample_name), [ results ] ]
+    quast_results       = ch_quast_results                          // channel: [ val(sample_name), [ results ] ]
 
     versions            = ch_versions                                // channel: [ versions.yml ]
 

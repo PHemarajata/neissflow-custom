@@ -4,8 +4,8 @@ process QUAST {
 
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/quast:5.2.0--py39pl5321heaaa4ec_4' :
-        'biocontainers/quast:5.2.0--py39pl5321heaaa4ec_4' }"
+        'https://depot.galaxyproject.org/singularity/quast:5.0.2--py37pl526hb5aa323_2' :
+        'biocontainers/quast:5.0.2--py37pl526hb5aa323_2' }"
 
     input:
     tuple val(meta) , path(consensus)
