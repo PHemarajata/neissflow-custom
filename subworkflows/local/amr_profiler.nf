@@ -26,8 +26,8 @@ workflow AMR_PROFILER {
     ch_versions = Channel.empty()
     
     // Create channels for NGMASTER database files
-    ch_ngstar_db = Channel.fromPath("${params.ngstar}").parent()
-    ch_ngmast_db = Channel.fromPath("${params.ngmast}").parent()
+    ch_ngstar_db = Channel.fromPath("${params.ngstar}").map { file(it).parent }
+    ch_ngmast_db = Channel.fromPath("${params.ngmast}").map { file(it).parent }
 
     //
     // Variant calling for HGT genes with Snippy
@@ -76,7 +76,9 @@ workflow AMR_PROFILER {
         ch_versions = ch_versions.mix(NGMASTER_SIMPLE.out.versions)
     } else {
         NGMASTER (
-            contigs
+            contigs,
+            ch_ngstar_db,
+            ch_ngmast_db
         )
         ch_ngmaster_report = NGMASTER.out.ngmaster_report
         ch_versions = ch_versions.mix(NGMASTER.out.versions)

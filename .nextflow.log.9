@@ -1,69 +1,67 @@
-Jun-30 12:08:00.697 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity,all --input ng_thailand.csv --outdir /home/phemarajata/Downloads/ng_pilot/resultss --name ng-pilot --only_fastq
-Jun-30 12:08:00.758 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.4
-Jun-30 12:08:00.784 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/phemarajata/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
-Jun-30 12:08:00.806 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jun-30 12:08:00.807 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jun-30 12:08:00.810 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Jun-30 12:08:00.821 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jun-30 12:08:00.850 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/phemarajata/neissflow/nextflow.config
-Jun-30 12:08:00.853 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/phemarajata/neissflow/nextflow.config
-Jun-30 12:08:00.879 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/phemarajata/.nextflow/secrets/store.json
-Jun-30 12:08:00.883 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@19f040ba] - activable => nextflow.secret.LocalSecretsProvider@19f040ba
-Jun-30 12:08:00.895 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity,all`
-Jun-30 12:08:02.309 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both]
-Jun-30 12:08:02.345 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Jun-30 12:08:02.366 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [curious_jepsen] DSL2 - revision: 93f13dad4b
-Jun-30 12:08:02.367 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Jun-30 12:08:02.367 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Jun-30 12:08:02.417 [main] DEBUG nextflow.Session - Session UUID: 8aa83c52-b070-475d-b78e-ea4dd10630e0
-Jun-30 12:08:02.418 [main] DEBUG nextflow.Session - Run name: curious_jepsen
-Jun-30 12:08:02.418 [main] DEBUG nextflow.Session - Executor pool size: 22
-Jun-30 12:08:02.425 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Jun-30 12:08:02.431 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jun-30 12:08:02.456 [main] DEBUG nextflow.cli.CmdRun - 
+Jun-30 17:10:40.195 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile singularity --input ng_thailand.csv --outdir /home/phemarajata/Downloads/ng_pilot/resultss --name ng-pilot --only_fastq -resume
+Jun-30 17:10:40.247 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.4
+Jun-30 17:10:40.267 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/phemarajata/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
+Jun-30 17:10:40.281 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-30 17:10:40.281 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-30 17:10:40.283 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jun-30 17:10:40.289 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-30 17:10:40.307 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/phemarajata/neissflow/nextflow.config
+Jun-30 17:10:40.309 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/phemarajata/neissflow/nextflow.config
+Jun-30 17:10:40.328 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/phemarajata/.nextflow/secrets/store.json
+Jun-30 17:10:40.331 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@29f0802c] - activable => nextflow.secret.LocalSecretsProvider@29f0802c
+Jun-30 17:10:40.344 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Jun-30 17:10:41.293 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [all, test_fasta, highmem, QC, debug, test, short, singularity, test_both]
+Jun-30 17:10:41.326 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jun-30 17:10:41.338 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [stoic_sinoussi] DSL2 - revision: 93f13dad4b
+Jun-30 17:10:41.339 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-30 17:10:41.339 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jun-30 17:10:41.372 [main] DEBUG nextflow.Session - Session UUID: e6d32db5-6f07-457b-8dad-fa30f7205e80
+Jun-30 17:10:41.372 [main] DEBUG nextflow.Session - Run name: stoic_sinoussi
+Jun-30 17:10:41.372 [main] DEBUG nextflow.Session - Executor pool size: 22
+Jun-30 17:10:41.378 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-30 17:10:41.383 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jun-30 17:10:41.397 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.04.4 build 5950
   Created: 16-06-2025 14:23 UTC (21:23 ICST)
   System: Linux 6.11.0-26-generic
   Runtime: Groovy 4.0.26 on Java HotSpot(TM) 64-Bit Server VM 17.0.12+8-LTS-286
   Encoding: UTF-8 (UTF-8)
-  Process: 247303@phemarajata-Stealth-16-MercedesAMG-A1VGG [127.0.1.1]
-  CPUs: 22 - Mem: 62.3 GB (14.3 GB) - Swap: 8 GB (8 GB)
-Jun-30 12:08:02.483 [main] DEBUG nextflow.Session - Work-dir: /home/phemarajata/neissflow/work [ext2/ext3]
-Jun-30 12:08:02.519 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Jun-30 12:08:02.529 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Jun-30 12:08:02.544 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Jun-30 12:08:02.583 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Jun-30 12:08:02.592 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
-Jun-30 12:08:02.651 [main] DEBUG nextflow.Session - Session start
-Jun-30 12:08:02.654 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/phemarajata/Downloads/ng_pilot/resultss/trace.txt
-Jun-30 12:08:02.811 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jun-30 12:08:03.920 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
-Jun-30 12:08:04.708 [main] DEBUG nextflow.plugin.PluginUpdater - Plugin nf-validation version null resolved to: 1.1.4
-Jun-30 12:08:04.710 [main] INFO  nextflow.plugin.PluginUpdater - Downloading plugin nf-validation@1.1.4
-Jun-30 12:08:06.785 [main] INFO  org.pf4j.util.FileUtils - Expanded plugin zip 'nf-validation-1.1.4.zip' in 'nf-validation-1.1.4'
-Jun-30 12:08:06.791 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.4' resolved
-Jun-30 12:08:06.791 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.4'
-Jun-30 12:08:06.795 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.4
-Jun-30 12:08:06.796 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Jun-30 12:08:06.999 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
-Jun-30 12:08:07.000 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
-Jun-30 12:08:07.001 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
-Jun-30 12:08:07.004 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Jun-30 12:08:07.005 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
-Jun-30 12:08:08.766 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Jun-30 12:08:08.856 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
-Jun-30 12:08:08.857 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
-Jun-30 12:08:08.857 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
-Jun-30 12:08:08.859 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Jun-30 12:08:08.859 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
-Jun-30 12:08:09.708 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
-Jun-30 12:08:09.708 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
-Jun-30 12:08:09.709 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
-Jun-30 12:08:09.710 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
-Jun-30 12:08:09.711 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
-Jun-30 12:08:09.768 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
-Jun-30 12:08:09.811 [main] DEBUG nextflow.Nextflow - Using schema file: nextflow_schema.json
-Jun-30 12:08:09.824 [main] INFO  nextflow.Nextflow - 
+  Process: 685628@phemarajata-Stealth-16-MercedesAMG-A1VGG [127.0.1.1]
+  CPUs: 22 - Mem: 62.3 GB (2.6 GB) - Swap: 8 GB (8 GB)
+Jun-30 17:10:41.424 [main] DEBUG nextflow.Session - Work-dir: /home/phemarajata/neissflow/work [ext2/ext3]
+Jun-30 17:10:41.443 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-30 17:10:41.450 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-30 17:10:41.462 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jun-30 17:10:41.481 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-30 17:10:41.489 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
+Jun-30 17:10:41.534 [main] DEBUG nextflow.Session - Session start
+Jun-30 17:10:41.537 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/phemarajata/Downloads/ng_pilot/resultss/trace.txt
+Jun-30 17:10:41.651 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-30 17:10:42.357 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Jun-30 17:10:42.876 [main] DEBUG nextflow.plugin.PluginUpdater - Plugin nf-validation version null resolved to: 1.1.4
+Jun-30 17:10:42.879 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.4' resolved
+Jun-30 17:10:42.879 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.4'
+Jun-30 17:10:42.883 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.4
+Jun-30 17:10:42.884 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Jun-30 17:10:43.009 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
+Jun-30 17:10:43.010 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
+Jun-30 17:10:43.010 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
+Jun-30 17:10:43.013 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Jun-30 17:10:43.013 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Jun-30 17:10:44.252 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Jun-30 17:10:44.310 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
+Jun-30 17:10:44.310 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
+Jun-30 17:10:44.311 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
+Jun-30 17:10:44.312 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Jun-30 17:10:44.313 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Jun-30 17:10:44.854 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp]; plugin Id: nf-validation
+Jun-30 17:10:44.854 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-validation
+Jun-30 17:10:44.854 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-validation
+Jun-30 17:10:44.856 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Jun-30 17:10:44.856 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Jun-30 17:10:44.896 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Jun-30 17:10:44.929 [main] DEBUG nextflow.Nextflow - Using schema file: nextflow_schema.json
+Jun-30 17:10:44.937 [main] INFO  nextflow.Nextflow - 
 
 -[2m----------------------------------------------------[0m-
 [0;32m             _          __ _               
@@ -75,13 +73,13 @@ Jun-30 12:08:09.824 [main] INFO  nextflow.Nextflow -
 [0;35m  neissflow/main.nf v2.0.0[0m
 -[2m----------------------------------------------------[0m-
 [1mCore Nextflow options[0m
-  [0;34mrunName                   : [0;32mcurious_jepsen[0m
+  [0;34mrunName                   : [0;32mstoic_sinoussi[0m
   [0;34mcontainerEngine           : [0;32msingularity[0m
   [0;34mlaunchDir                 : [0;32m/home/phemarajata/neissflow[0m
   [0;34mworkDir                   : [0;32m/home/phemarajata/neissflow/work[0m
   [0;34mprojectDir                : [0;32m/home/phemarajata/neissflow[0m
   [0;34muserName                  : [0;32mphemarajata[0m
-  [0;34mprofile                   : [0;32msingularity,all[0m
+  [0;34mprofile                   : [0;32msingularity[0m
   [0;34mconfigFiles               : [0;32m[0m
 
 [1mInput/output options[0m
@@ -132,31 +130,109 @@ If you use neissflow/main.nf for your analysis please cite:
 * Software dependencies
   https://github.com/CDCgov/neissflow/main.nf/-/blob/main/CITATIONS.md
 -[2m----------------------------------------------------[0m-
-Jun-30 12:08:09.835 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'ng_thailand.csv' with 'assets/schema_input.json'
-Jun-30 12:08:09.933 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 1 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668843_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668843_2.fastq)
-Jun-30 12:08:09.934 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 1 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668843_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668843_1.fastq)
-Jun-30 12:08:09.934 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 2 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668844_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668844_2.fastq)
-Jun-30 12:08:09.934 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 2 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668844_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668844_1.fastq)
-Jun-30 12:08:09.935 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 3 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668845_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668845_2.fastq)
-Jun-30 12:08:09.935 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 3 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668845_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668845_1.fastq)
-Jun-30 12:08:09.935 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 4 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668846_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668846_2.fastq)
-Jun-30 12:08:09.936 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 4 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668846_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668846_1.fastq)
-Jun-30 12:08:09.936 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 5 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668847_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668847_2.fastq)
-Jun-30 12:08:09.936 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 5 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668847_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668847_1.fastq)
-Jun-30 12:08:09.937 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 6 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668848_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668848_2.fastq)
-Jun-30 12:08:09.937 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 6 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668848_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668848_1.fastq)
-Jun-30 12:08:09.937 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 7 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668849_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668849_2.fastq)
-Jun-30 12:08:09.938 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 7 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668849_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668849_1.fastq)
-Jun-30 12:08:09.938 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 8 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668850_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668850_2.fastq)
-Jun-30 12:08:09.939 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 8 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668850_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668850_1.fastq)
-Jun-30 12:08:09.939 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 9 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668851_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668851_2.fastq)
-Jun-30 12:08:09.939 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 9 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668851_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668851_1.fastq)
-Jun-30 12:08:09.939 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 10 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668852_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668852_2.fastq)
-Jun-30 12:08:09.940 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 10 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668852_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668852_1.fastq)
-Jun-30 12:08:09.940 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 11 - fastq_2: string [/home/phemarajata/Downloads/ng_pilot/ERR9668853_2.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668853_2.fastq)
-Jun-30 12:08:09.940 [main] DEBUG nextflow.validation.SchemaValidator - * -- Entry 11 - fastq_1: string [/home/phemarajata/Downloads/ng_pilot/ERR9668853_1.fastq] does not match pattern ^\S+\.f(ast)?q\.gz$ (/home/phemarajata/Downloads/ng_pilot/ERR9668853_1.fastq)
-Jun-30 12:08:09.941 [main] ERROR nextflow.validation.SchemaValidator - ERROR: Validation of 'ng_thailand.csv' file failed!
-Jun-30 12:08:09.947 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Jun-30 17:10:44.945 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'ng_thailand.csv' with 'assets/schema_input.json'
+Jun-30 17:10:45.011 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'ng_thailand.csv' with 'assets/schema_input.json'
+Jun-30 17:10:45.063 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:CHECK_FASTQS
+Jun-30 17:10:45.065 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CHECK_FASTQS` matches process NFCORE_NEISSFLOW:NEISSFLOW:CHECK_FASTQS
+Jun-30 17:10:45.071 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.071 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.075 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-30 17:10:45.079 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=22; memory=62.3 GB; capacity=2; pollInterval=100ms; dumpInterval=5m
+Jun-30 17:10:45.080 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-30 17:10:45.094 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:CHECK_FASTQS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.119 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP
+Jun-30 17:10:45.119 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTP` matches process NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP
+Jun-30 17:10:45.122 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.122 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.123 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.133 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:PARSE_FASTP_REPORTS
+Jun-30 17:10:45.134 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PARSE_FASTP_REPORTS` matches process NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:PARSE_FASTP_REPORTS
+Jun-30 17:10:45.136 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.136 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.137 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:PARSE_FASTP_REPORTS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:COMBINE_FASTP_REPORTS
+Jun-30 17:10:45.146 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:COMBINE_FASTP_REPORTS` matches process NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:COMBINE_FASTP_REPORTS
+Jun-30 17:10:45.148 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.148 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.149 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:COMBINE_FASTP_REPORTS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.154 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP_QC_CHECK
+Jun-30 17:10:45.155 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FASTP_QC_CHECK` matches process NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP_QC_CHECK
+Jun-30 17:10:45.157 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.157 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.158 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:PREPROCESSING:FASTP_QC_CHECK': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.189 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:SNIPPY
+Jun-30 17:10:45.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNIPPY` matches process NFCORE_NEISSFLOW:NEISSFLOW:SNIPPY
+Jun-30 17:10:45.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.195 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:SNIPPY': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.209 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:SHOVILL
+Jun-30 17:10:45.210 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SHOVILL` matches process NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:SHOVILL
+Jun-30 17:10:45.212 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.212 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.213 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:SHOVILL': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.223 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:ASSEMBLY_STATS
+Jun-30 17:10:45.223 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSEMBLY_STATS` matches process NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:ASSEMBLY_STATS
+Jun-30 17:10:45.225 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.225 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.226 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:ASSEMBLY_STATS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.234 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:QUAST
+Jun-30 17:10:45.235 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:QUAST` matches process NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:QUAST
+Jun-30 17:10:45.237 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.237 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.237 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:ASSEMBLY:QUAST': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.250 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:MASH
+Jun-30 17:10:45.250 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MASH` matches process NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:MASH
+Jun-30 17:10:45.251 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.252 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.252 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:MASH': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.259 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COMBINE_MASH_REPORTS
+Jun-30 17:10:45.260 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:COMBINE_MASH_REPORTS` matches process NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COMBINE_MASH_REPORTS
+Jun-30 17:10:45.261 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.262 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COMBINE_MASH_REPORTS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.269 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:STATS
+Jun-30 17:10:45.270 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:STATS` matches process NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:STATS
+Jun-30 17:10:45.272 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.272 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.272 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:STATS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.279 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COVERAGE
+Jun-30 17:10:45.280 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:COVERAGE` matches process NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COVERAGE
+Jun-30 17:10:45.281 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.282 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.283 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:SPECIES_CHECK:COVERAGE': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.294 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_NEISSFLOW:NEISSFLOW:INITIAL_MERGE
+Jun-30 17:10:45.294 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:INITIAL_MERGE` matches process NFCORE_NEISSFLOW:NEISSFLOW:INITIAL_MERGE
+Jun-30 17:10:45.296 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.296 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.297 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:INITIAL_MERGE': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_NEISSFLOW:NEISSFLOW:QC_CHECK
+Jun-30 17:10:45.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:QC_CHECK` matches process NFCORE_NEISSFLOW:NEISSFLOW:QC_CHECK
+Jun-30 17:10:45.303 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.303 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.303 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:QC_CHECK': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.327 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:SNIPPY_AMR
+Jun-30 17:10:45.328 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SNIPPY_AMR` matches process NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:SNIPPY_AMR
+Jun-30 17:10:45.331 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.331 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.332 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:SNIPPY_AMR': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.343 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:DEPTH
+Jun-30 17:10:45.344 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DEPTH` matches process NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:DEPTH
+Jun-30 17:10:45.345 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.345 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.345 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:DEPTH': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.353 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:VARIANT_ANALYSIS
+Jun-30 17:10:45.354 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VARIANT_ANALYSIS` matches process NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:VARIANT_ANALYSIS
+Jun-30 17:10:45.355 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.355 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.355 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:VARIANT_ANALYSIS': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.361 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:MLST
+Jun-30 17:10:45.362 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MLST` matches process NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:MLST
+Jun-30 17:10:45.363 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-30 17:10:45.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-30 17:10:45.364 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:MLST': maxForks=0; fair=false; array=0
+Jun-30 17:10:45.369 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:NGMASTER
+Jun-30 17:10:45.370 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:NGMASTER` matches process NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:NGMASTER
+Jun-30 17:10:45.373 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_ac1b9ebc1dbc25c6: /home/phemarajata/neissflow/modules/local/snippy_amr.nf
   Script_fbb27da614938724: /home/phemarajata/neissflow/modules/local/mash/combine_mash_reports.nf
   Script_ec1fe5e58cfe9c00: /home/phemarajata/neissflow/modules/local/merge/merge.nf
@@ -164,124 +240,122 @@ Jun-30 12:08:09.947 [main] DEBUG nextflow.script.ScriptRunner - Parsed script fi
   Script_063d4aa3571d67c4: /home/phemarajata/neissflow/subworkflows/local/preprocessing.nf
   Script_cf2d853731db1f6f: /home/phemarajata/neissflow/modules/local/variant_analysis.nf
   Script_e23f1b43c7ddfa33: /home/phemarajata/neissflow/modules/local/gotree.nf
-  Script_b34b96a8a8820b71: /home/phemarajata/neissflow/modules/local/snippy.nf
   Script_8f2fe9fed8c4775f: /home/phemarajata/neissflow/modules/local/gubbins.nf
+  Script_c950ad672cad0574: /home/phemarajata/neissflow/subworkflows/local/assembly.nf
   Script_34a6e65ee7dbdbe0: /home/phemarajata/neissflow/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
   Script_2e5348732a4e7bb0: /home/phemarajata/neissflow/modules/local/fastp/fastp_qc.nf
-  Script_9035be875c2e4a73: /home/phemarajata/neissflow/modules/local/ngmaster.nf
   Script_a7d371fe23db7aab: /home/phemarajata/neissflow/subworkflows/nf-core/utils_nfvalidation_plugin/main.nf
+  Script_359ce4cd245804ed: /home/phemarajata/neissflow/modules/local/shovill.nf
   Script_b5147d15f6697044: /home/phemarajata/neissflow/modules/local/check_fastqs.nf
   Script_d43a7ac6165a9098: /home/phemarajata/neissflow/modules/local/count_mono.nf
-  Script_11299cb12a111d0f: /home/phemarajata/neissflow/modules/nf-core/multiqc/main.nf
   Script_9d26c2a2d1c0a0de: /home/phemarajata/neissflow/subworkflows/local/phylogeny.nf
+  Script_11299cb12a111d0f: /home/phemarajata/neissflow/modules/nf-core/multiqc/main.nf
   Script_48a7912bd49586a6: /home/phemarajata/neissflow/modules/local/raxml.nf
+  Script_322a87e3ad1d33ae: /home/phemarajata/neissflow/modules/nf-core/quast/main.nf
   Script_a7f0a8b18000f99b: /home/phemarajata/neissflow/modules/local/snippy_core.nf
+  Script_41245588d72ef3fd: /home/phemarajata/neissflow/modules/local/assembly_stats_lite.nf
   Script_a770572eb6fe426e: /home/phemarajata/neissflow/modules/local/mash/mash.nf
-  Script_369f0e1a2dd21b16: /home/phemarajata/neissflow/subworkflows/local/amr_profiler.nf
   Script_ac97c488bf8f3054: /home/phemarajata/neissflow/modules/local/blastn.nf
   Script_767f800d4dcf57d3: /home/phemarajata/neissflow/main.nf
   Script_0dae9d44ac43c4a0: /home/phemarajata/neissflow/modules/local/make_guide.nf
-  Script_a91022202ff9beb3: /home/phemarajata/neissflow/modules/local/stats/stats.nf
   Script_007bea257a1e8340: /home/phemarajata/neissflow/modules/local/merge_amr.nf
+  Script_a91022202ff9beb3: /home/phemarajata/neissflow/modules/local/stats/stats.nf
   Script_5fc15ace3b544ea6: /home/phemarajata/neissflow/modules/local/snippy_clean.nf
   Script_50e35ca81c2bdff5: /home/phemarajata/neissflow/modules/local/stats/coverage.nf
   Script_b46a7490731f48c6: /home/phemarajata/neissflow/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+  Script_e7038a1bc855c4d5: /home/phemarajata/neissflow/subworkflows/local/amr_profiler.nf
   Script_13defc9c09aa2789: /home/phemarajata/neissflow/modules/local/fastp/fastp.nf
   Script_fb702b768132f516: /home/phemarajata/neissflow/modules/local/merge_single_amr.nf
   Script_76e9ac96a6c60717: /home/phemarajata/neissflow/modules/local/report.nf
   Script_ea9be7e6addc69f2: /home/phemarajata/neissflow/modules/local/outbreak_detection.nf
   Script_2b7779e2cd301515: /home/phemarajata/neissflow/modules/local/depth.nf
-  Script_033e739b8102f047: /home/phemarajata/neissflow/modules/local/remove_ref.nf
   Script_6458cf0a0bb2502a: /home/phemarajata/neissflow/modules/local/cluster_coloring.nf
+  Script_033e739b8102f047: /home/phemarajata/neissflow/modules/local/remove_ref.nf
   Script_d830b0124e052347: /home/phemarajata/neissflow/modules/local/fastp/combine_reports.nf
+  Script_6c3541dfe77fe9ce: /home/phemarajata/neissflow/modules/local/snippy.nf
   Script_30d352b9a5a897a7: /home/phemarajata/neissflow/workflows/QC.nf
   Script_4b63ccfa0e441536: /home/phemarajata/neissflow/modules/local/fastp/parse_fastp.nf
   Script_2e8b63203ad4b51b: /home/phemarajata/neissflow/modules/local/qc_check/initial_merge.nf
-  Script_2d86a8d41a923442: /home/phemarajata/neissflow/modules/local/shovill.nf
   Script_228dd5752694ad41: /home/phemarajata/neissflow/subworkflows/local/utils_nfcore_neissflow_pipeline/main.nf
   Script_b691b9ae3f2e1f32: /home/phemarajata/neissflow/workflows/neissflow.nf
   Script_5b55a3c20d20497b: /home/phemarajata/neissflow/modules/local/spades/assembly_stats.nf
+  Script_6ca550f3f0c7dc72: /home/phemarajata/neissflow/modules/local/ngmaster_simple.nf
   Script_5e4d0c74c660a18f: /home/phemarajata/neissflow/modules/local/mlst.nf
+  Script_6ac324cd379632e2: /home/phemarajata/neissflow/modules/local/ngmaster.nf
   Script_f4f76b72002b7de0: /home/phemarajata/neissflow/modules/local/phylogeny_qc.nf
   Script_c00eb8d86f7b528a: /home/phemarajata/neissflow/subworkflows/local/species_check.nf
   Script_38723cf1683a6e5a: /home/phemarajata/neissflow/modules/local/snpdists.nf
   Script_8c745e5eb1edbf46: /home/phemarajata/neissflow/modules/local/reroot.nf
-  Script_f72d4d9cbbb018a1: /home/phemarajata/neissflow/modules/nf-core/quast/main.nf
-  Script_781d346a82f2e07c: /home/phemarajata/neissflow/subworkflows/local/assembly.nf
-Jun-30 12:08:09.948 [main] DEBUG nextflow.Session - Session aborted -- Cause: [0;31mThe following errors have been detected:
+Jun-30 17:10:45.373 [main] DEBUG nextflow.Session - Session aborted -- Cause: Process `NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:NGMASTER` declares 3 input channels but 1 were specified
+Jun-30 17:10:45.385 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-30 17:10:45.389 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] map
+  [operator] mix
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] splitCsv
+  [operator] map
+  [operator] map
+  [operator] map
+  [operator] join
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] mix
+  [operator] map
+  [operator] map
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] join
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] collect
+  [operator] mix
+  [operator] mix
+  [operator] mix
+  [operator] splitCsv
+  [operator] map
+  [operator] map
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] map
+  [operator] map
+  [operator] mix
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] join
+  [operator] mix
+  [operator] mix
 
-* -- Entry 1 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668843_2.fastq)
-* -- Entry 1 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668843_1.fastq)
-* -- Entry 2 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668844_2.fastq)
-* -- Entry 2 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668844_1.fastq)
-* -- Entry 3 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668845_2.fastq)
-* -- Entry 3 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668845_1.fastq)
-* -- Entry 4 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668846_2.fastq)
-* -- Entry 4 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668846_1.fastq)
-* -- Entry 5 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668847_2.fastq)
-* -- Entry 5 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668847_1.fastq)
-* -- Entry 6 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668848_2.fastq)
-* -- Entry 6 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668848_1.fastq)
-* -- Entry 7 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668849_2.fastq)
-* -- Entry 7 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668849_1.fastq)
-* -- Entry 8 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668850_2.fastq)
-* -- Entry 8 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668850_1.fastq)
-* -- Entry 9 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668851_2.fastq)
-* -- Entry 9 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668851_1.fastq)
-* -- Entry 10 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668852_2.fastq)
-* -- Entry 10 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668852_1.fastq)
-* -- Entry 11 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668853_2.fastq)
-* -- Entry 11 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668853_1.fastq)
-[0m
-
-Jun-30 12:08:09.968 [main] DEBUG nextflow.cli.Launcher - Operation aborted
-nextflow.validation.SchemaValidationException: [0;31mThe following errors have been detected:
-
-* -- Entry 1 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668843_2.fastq)
-* -- Entry 1 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668843_1.fastq)
-* -- Entry 2 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668844_2.fastq)
-* -- Entry 2 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668844_1.fastq)
-* -- Entry 3 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668845_2.fastq)
-* -- Entry 3 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668845_1.fastq)
-* -- Entry 4 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668846_2.fastq)
-* -- Entry 4 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668846_1.fastq)
-* -- Entry 5 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668847_2.fastq)
-* -- Entry 5 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668847_1.fastq)
-* -- Entry 6 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668848_2.fastq)
-* -- Entry 6 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668848_1.fastq)
-* -- Entry 7 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668849_2.fastq)
-* -- Entry 7 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668849_1.fastq)
-* -- Entry 8 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668850_2.fastq)
-* -- Entry 8 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668850_1.fastq)
-* -- Entry 9 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668851_2.fastq)
-* -- Entry 9 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668851_1.fastq)
-* -- Entry 10 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668852_2.fastq)
-* -- Entry 10 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668852_1.fastq)
-* -- Entry 11 - fastq_2: FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668853_2.fastq)
-* -- Entry 11 - fastq_1: FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz' (/home/phemarajata/Downloads/ng_pilot/ERR9668853_1.fastq)
-[0m
-
-	at nextflow.validation.SchemaValidator.validateFile(SchemaValidator.groovy:607)
-	at nextflow.validation.SchemaValidator.fromSamplesheet(SchemaValidator.groovy:206)
-	at nextflow.validation.SchemaValidator.fromSamplesheet(SchemaValidator.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at nextflow.plugin.extension.ChannelFactoryInstance.invoke0(ChannelFactoryInstance.groovy:68)
-	at nextflow.plugin.extension.ChannelFactoryInstance.invokeExtensionMethod(ChannelFactoryInstance.groovy:82)
-	at nextflow.plugin.extension.PluginExtensionProvider.invokeFactoryExtensionMethod(PluginExtensionProvider.groovy:287)
-	at nextflow.Channel.$static_methodMissing(Channel.groovy:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaClassImpl.invokeStaticMissingMethod(MetaClassImpl.java:1639)
-	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1627)
-	at groovy.lang.DelegatingMetaClass.invokeStaticMethod(DelegatingMetaClass.java:173)
+Jun-30 17:10:45.393 [main] ERROR nextflow.cli.Launcher - Process `NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:NGMASTER` declares 3 input channels but 1 were specified
+nextflow.exception.ScriptRuntimeException: Process `NFCORE_NEISSFLOW:NEISSFLOW:AMR_PROFILER:NGMASTER` declares 3 input channels but 1 were specified
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:175)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_228dd5752694ad41$_runScript_closure2$_closure4.doCall(Script_228dd5752694ad41:84)
+	at Script_e7038a1bc855c4d5$_runScript_closure1$_closure2.doCall(Script_e7038a1bc855c4d5:78)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -303,7 +377,51 @@ nextflow.validation.SchemaValidationException: [0;31mThe following errors have 
 	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at Script_767f800d4dcf57d3$_runScript_closure3$_closure6.doCall(Script_767f800d4dcf57d3:90)
+	at Script_b691b9ae3f2e1f32$_runScript_closure1$_closure2.doCall(Script_b691b9ae3f2e1f32:270)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_767f800d4dcf57d3$_runScript_closure2$_closure5.doCall(Script_767f800d4dcf57d3:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_767f800d4dcf57d3$_runScript_closure3$_closure6.doCall(Script_767f800d4dcf57d3:125)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

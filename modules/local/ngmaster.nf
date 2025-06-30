@@ -38,7 +38,7 @@ process NGMASTER {
         cp ngmast_db/* local_db/pubmlst/ngmast/ 2>/dev/null || true
     fi
     
-    # Create a robust wrapper to handle NGMASTER database and execution issues
+    # Generate robust wrapper for NGMASTER database and execution issues
     cat > ngmaster_robust.py << 'EOF'
 #!/usr/bin/env python3
 import sys
@@ -46,16 +46,15 @@ import subprocess
 import os
 
 def create_fallback_output(assembly_file):
-    """Create fallback output when NGMASTER fails"""
     assembly_name = os.path.basename(assembly_file)
     fallback_lines = [
         "FILE\tSCHEME\tST\tporB\ttbpB\tpenA\tgyrA\tparC\t23S\tmtrR",
         f"{assembly_name}\tngmast/ngstar\t-/-\t-\t-\t-\t-\t-\t-\t-"
     ]
-    return "\n".join(fallback_lines) + "\n"
+    newline = chr(10)
+    return newline.join(fallback_lines) + newline
 
 def run_ngmaster_robust(db_path, assembly_file):
-    """Run NGMASTER with robust error handling"""
     
     # Check if the assembly file exists and is readable
     if not os.path.exists(assembly_file):
